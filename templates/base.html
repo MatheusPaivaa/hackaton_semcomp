@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WildNotify</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style-base.css') }}" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo da WildNotify" />
+      <h2>WildNotify</h2>
+    </div>
+    <ul class="sidebar-links">
+      <h4>
+        <span>Menu Principal</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="{{ url_for('home') }}"><span class="material-symbols-outlined"> home </span>Home</a>
+      </li>
+      <li>
+        <a href="{{ url_for('torneios_ativos') }}"><span class="material-symbols-outlined"> stream </span>Torneios Ativos</a>
+      </li>
+      <li>
+        <a href="{{ url_for('meus_torneios') }}"><span class="material-symbols-outlined"> sports_esports </span>Meus Torneios</a>
+      </li>
+      <li>
+        <a href="{{ url_for('notificacoes') }}"><span class="material-symbols-outlined"> notifications_active </span>Notificações</a>
+      </li>
+      <h4>
+        <span>Conta</span>
+        <div class="menu-separator"></div>
+      </h4>
+      <li>
+        <a href="{{ url_for('perfil') }}"><span class="material-symbols-outlined"> account_circle </span>Perfil</a>
+      </li>
+      <li>
+        <a href="{{ url_for('logout') }}"><span class="material-symbols-outlined"> logout </span>Sair</a>
+      </li>
+    </ul>
+
+    <div class="user-account">
+      <div class="user-profile">
+    <img src="{{ url_for('static', filename='images/profile_image.jpg') }}" alt="Logo da WildNotify" />
+        <div class="user-detail">
+          <h3>Felipe Azambuja</h3>
+          <span>Moderador</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Conteúdo Específico de Cada Página -->
+  <div class="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>
