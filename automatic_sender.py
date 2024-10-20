@@ -41,14 +41,15 @@ def verificar_e_enviar_emails(usuarios_csv, partidas_csv, remetente, senha):
     except Exception as e:
         print(f"Erro ao verificar e enviar emails: {e}")
 
-# Configurações e dados necessários
-usuarios_csv = 'usuarios.csv'  # Caminho para o CSV dos usuários
-partidas_csv = 'partidas.csv'  # Caminho para o CSV das partidas
-remetente = 'botemailAbreu@gmail.com'  # Email do remetente
-senha = 'bkas zfdi gkif xiee'  # Senha do aplicativo
+def automatic_sender():
+    # Configurações e dados necessários
+    usuarios_csv = 'usuarios.csv'  # Caminho para o CSV dos usuários
+    partidas_csv = 'partidas.csv'  # Caminho para o CSV das partidas
+    remetente = 'botemailAbreu@gmail.com'  # Email do remetente
+    senha = 'bkas zfdi gkif xiee'  # Senha do aplicativo
 
-# Executando a função para verificar e enviar emails
-try:
-    verificar_e_enviar_emails(usuarios_csv, partidas_csv, remetente, senha)
-except Exception as e:
-    print(f"Erro ao executar a verificação de emails: {e}")
+    # Executando a função para verificar e enviar emails
+    try:
+        verificar_e_enviar_emails(usuarios_csv, partidas_csv, remetente, senha)
+    except Exception as e:
+        print(f"Erro ao executar a verificação de emails: {e}")
