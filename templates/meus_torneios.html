@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <h1>Meus torneios</h1>
+
+  <hr>
+
+  <!-- Filtros de Torneios -->
+  <div class="filter-buttons">
+    <button class="filter-btn" onclick="filterTournaments('all')">Todos</button>
+    <button class="filter-btn" onclick="filterTournaments('in_progress')">Em andamento</button>
+    <button class="filter-btn" onclick="filterTournaments('upcoming')">Próximos</button>
+  </div>
+
+  <div class="tournament-grid">
+    <!-- Bloco de Torneio -->
+    {% for torneio in torneios %}
+    <div class="tournament-item" data-status="{{ torneio.status }}">
+      <img src="{{ torneio.image }}" alt="{{ torneio.name }}" class="tournament-image">
+      <div class="tournament-details">
+        <div class="tournament-header">
+          <h2>{{ torneio.name }}</h2>
+          <span class="tournament-date">{{ torneio.date }}</span>
+        </div>
+        <p>{{ torneio.description }}</p>
+        <a href="{{ url_for('detalhes', torneio_id=torneio.id) }}" class="btn-details">Ver Detalhes</a>
+
+        <!-- Botão de Remover Torneio -->
+        <form action="{{ url_for('remover_meu_torneio', torneio_id=torneio.id) }}" method="POST" style="display: inline-block;">
+          <button type="submit" class="btn-remove" title="Remover dos Meus Torneios">
+            <span class="material-symbols-outlined">
+              delete
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <script>
+    // Função para filtrar os torneios
+    function filterTournaments(status) {
+      var items = document.getElementsByClassName('tournament-item');
+      for (var i = 0; i < items.length; i++) {
+        var itemStatus = items[i].getAttribute('data-status');
+        if (status === 'all' || itemStatus === status) {
+          items[i].style.display = 'block'; // Mostra o item
+        } else {
+          items[i].style.display = 'none';  // Esconde o item
+        }
+      }
+    }
+  </script>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WildNotify</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://kit.fontawesome.com/e9be548f62.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style-login.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style-base.css') }}" />
+</head>
+<body>
+  {% with messages = get_flashed_messages(with_categories=True) %}
+{% if messages %}
+  {% for category, message in messages %}
+    <div class="alert alert-{{ category }}" role="alert">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+{% endwith %}
+
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form action="/login" method="POST">
+                <h1>Login</h1>
+                <input type="username" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <a href="#">Esqueceu a senha?</a>
+                <button type="submit">Entrar</button>
+
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <h1>WildNotify</h1>
+                    <p>Plataforma para agilizar comunicação Moderador-Competidor!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para ocultar a mensagem de flash após 5 segundos -->
+    <script>
+      setTimeout(function() {
+        var flashMessage = document.getElementById('flash-message');
+        if (flashMessage) {
+          flashMessage.style.display = 'none';
+        }
+      }, 5000); // Oculta a mensagem após 5 segundos
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f6f5f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Montserrat', sans-serif;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-weight: bold;
+      margin: 0;
+      color: #333;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 100;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+      margin: 20px 0 30px;
+      color: #333;
+    }
+
+    button {
+      border-radius: 20px;
+      border: 1px solid #161a2d;
+      background-color: #161a2d;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform 80ms ease-in;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    button:hover {
+      background-color: #161a2dde;
+      border-color: #161a2dde;
+    }
+
+    form {
+      background-color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin: 20px auto; /* Centraliza o formulário horizontalmente */
+    }
+
+    input, select, textarea {
+      background-color: #eee;
+      border: none;
+      padding: 12px 15px;
+      margin: 8px 0;
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #161a2dde;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    a.btn-back {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #161a2d;
+      color: #FFFFFF;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    a.btn-back:hover {
+      background-color: #161a2dd3;
+    }
+
+    /* Centraliza a página completamente */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+    }
+
+  </style>
+
+  <div class="container">
+    <h1>Comunicar com a equipe: {{ team_name }}</h1>
+
+    <hr>
+
+    <!-- Formulário de comunicação -->
+    <form action="{{ url_for('comunicar_equipe', torneio_id=torneio_id, team_name=team_name) }}" method="POST">
+      <div class="form-group">
+        <label for="tags">Tags</label>
+        <input type="text" id="tags" name="tags" class="form-control" placeholder="Adicione tags (separadas por vírgula)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="prioridade">Tipo da Mensagem</label>
+        <select id="prioridade" name="prioridade" class="form-control" required>
+          <option value="notificacao">Notificação</option>
+          <option value="confirmacao">Confirmação</option>
+          <option value="informacao">Informação</option>
+          <option value="cancelamento">Cancelamento</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+    </form>
+
+    <a href="{{ url_for('detalhes', torneio_id=torneio_id) }}" class="btn-back">Voltar</a>
+  </div>
+{% endblock %}

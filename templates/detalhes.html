@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <h1>Detalhes do Torneio: {{ torneio.name }}</h1>
+    <hr>
+    <div class="tournament-details-page">
+        <img src="{{ torneio.image }}" alt="{{ torneio.name }}" class="tournament-image-details">
+        <div class="tournament-info">
+          <p><strong>Data:</strong> {{ torneio.date }}</p>
+          <p><strong>Descrição:</strong> {{ torneio.description }}</p>
+        </div>
+    </div>
+      
+
+    <h2>Equipes Participantes</h2>
+
+    <!-- Grid de equipes -->
+    <div class="teams-grid">
+    {% for team in torneio.teams %}
+    <div class="team-block">
+        <h3>{{ team }}</h3>
+        <br>
+        <!-- Botão que redireciona para a página de comunicação com a equipe -->
+        <a href="{{ url_for('comunicar_equipe', torneio_id=torneio.id, team_name=team) }}" class="btn-communicate">Comunicar Equipe</a>
+    </div>
+    {% endfor %}
+    </div>
+
+    <div class="btn-back-container">
+        <a href="{{ url_for('torneios_ativos') }}" class="btn-back">Voltar para Torneios</a>
+    </div>
+
+    <script>
+        // Função para ocultar o alerta flash após 5 segundos
+        setTimeout(function() {
+          var flashMessage = document.getElementById('flash-message');
+          if (flashMessage) {
+            flashMessage.style.display = 'none';
+          }
+        }, 5000); // 5000 ms = 5 segundos
+      </script>
+
+{% endblock %}
