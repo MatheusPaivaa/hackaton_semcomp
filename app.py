@@ -46,6 +46,8 @@ def meus_torneios():
     else:
         return redirect(url_for('login'))
 
+        
+
 # Página Notificações
 @app.route('/notificacoes')
 def notificacoes():

@@ -2,10 +2,14 @@ import smtplib
 import pandas as pd
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from datetime import datetime
+import os  # Para garantir o uso das variáveis de ambiente
 
 def enviar_email(destinatario, nome, torneio, data_partida, horario_partida, time, cargo, remetente, senha):
     try:
+        # Verificar se os campos são válidos
+        if not destinatario or not remetente or not senha:
+            raise ValueError("Destinatário, remetente ou senha não foram fornecidos corretamente.")
+
         # Configuração do servidor SMTP (exemplo: Gmail)
         servidor = smtplib.SMTP('smtp.gmail.com', 587)
         servidor.starttls()
@@ -17,29 +21,27 @@ def enviar_email(destinatario, nome, torneio, data_partida, horario_partida, tim
         email['To'] = destinatario
         email['Subject'] = f"Confirmação da Partida do {torneio} em {data_partida}"
 
-        # Mensagem personalizada
+        # Mensagem personalizada com HTML para formatação
         mensagem = f"""
-        Olá {nome},
-
-        Esta é a confirmação oficial da sua próxima partida pelo torneio **{torneio}**.
-
-        *Informações da Partida:*
-        - Time: {time}
-        - Cargo: {cargo}
-        - Data: {data_partida}
-        - Horário: {horario_partida}
-
-        *Por favor, confirme sua presença o mais breve possível* através do formulário:
-
-        *Google Forms*: [Clique aqui para confirmar](https://forms.gle/exemplo)
-
-        Sua confirmação é muito importante para a organização do evento.
-
-        Atenciosamente,
-        Organização do Evento
+        <html>
+            <body>
+                <p>Olá {nome},</p>
+                <p>Esta é a confirmação oficial da sua próxima partida pelo torneio <strong>{torneio}</strong>.</p>
+                <ul>
+                    <li><strong>Time:</strong> {time}</li>
+                    <li><strong>Cargo:</strong> {cargo}</li>
+                    <li><strong>Data:</strong> {data_partida}</li>
+                    <li><strong>Horário:</strong> {horario_partida}</li>
+                </ul>
+                <p>Por favor, confirme sua presença o mais breve possível através do formulário:</p>
+                <p><a href="https://forms.gle/exemplo">Clique aqui para confirmar</a></p>
+                <p>Sua confirmação é muito importante para a organização do evento.</p>
+                <p>Atenciosamente,<br>Organização do Evento</p>
+            </body>
+        </html>
         """
 
-        email.attach(MIMEText(mensagem, 'plain'))
+        email.attach(MIMEText(mensagem, 'html'))  # Enviar como HTML
 
         # Enviando o email
         servidor.sendmail(remetente, destinatario, email.as_string())
@@ -55,14 +57,24 @@ def buscar_e_enviar_email(participante_id, participantes_csv, partidas_csv, reme
         participantes = pd.read_csv(participantes_csv, encoding='utf-8')
         partidas = pd.read_csv(partidas_csv, encoding='utf-8')
 
-        # Filtra o participante pelo id
-        participante = participantes[participantes['id'] == participante_id]
+        # Converter ID para string e remover NaNs
+        participantes['ID'] = participantes['ID'].astype(str)
+        participantes = participantes.dropna(subset=['ID', 'Nome Completo', 'E-mail', 'Time', 'Cargo (Capitão ou jogador)'])
+
+        # Filtrar linhas de teste ou inválidas
+        participantes = participantes[~participantes['ID'].str.lower().str.contains('teste')]
+        participantes = participantes[~participantes['Nome Completo'].str.lower().str.contains('teste')]
+
+        participante_id = str(participante_id)
+
+        # Filtra o participante pelo ID
+        participante = participantes[participantes['ID'] == participante_id]
 
         if not participante.empty:
-            time_participante = participante.iloc[0]['time']
-            email = participante.iloc[0]['email']
-            cargo = participante.iloc[0]['cargo']
-            nome = participante.iloc[0]['nome']
+            time_participante = participante.iloc[0]['Time']
+            email = participante.iloc[0]['E-mail']
+            cargo = participante.iloc[0]['Cargo (Capitão ou jogador)']
+            nome = participante.iloc[0]['Nome Completo']
 
             # Filtra a partida relevante para o time do participante
             partida = partidas[
@@ -70,7 +82,7 @@ def buscar_e_enviar_email(participante_id, participantes_csv, partidas_csv, reme
             ]
 
             if not partida.empty:
-                data_partida = datetime.strptime(partida.iloc[0]['data_partida'], '%Y-%m-%d').date()
+                data_partida = partida.iloc[0]['data_partida']
                 horario_partida = partida.iloc[0]['horario_partida']
                 torneio = partida.iloc[0]['torneio']
 
@@ -82,7 +94,7 @@ def buscar_e_enviar_email(participante_id, participantes_csv, partidas_csv, reme
             else:
                 print(f"Partida não encontrada para o time {time_participante}.")
         else:
-            print(f"Participante com id {participante_id} não encontrado.")
+            print(f"Participante com ID {participante_id} não encontrado.")
     except FileNotFoundError as e:
         print(f"Erro: Arquivo não encontrado - {e}")
     except pd.errors.EmptyDataError as e:

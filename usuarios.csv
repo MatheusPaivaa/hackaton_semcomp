@@ -1,45 +1,112 @@
-id,nome,email,telefone,IDdiscord,faculdade,time,cargo
-227236575,Gabriel,gabrielabreu571secundaria@gmail.com,123456789,joao#1234,Faculdade A,Time A,Capitão
-501963591,Maria,maria@example.com,987654321,maria#5678,Faculdade B,Time B,Jogadora
-933065885,Ana,clara@example.com,730179363,ana#7674,Faculdade C,Time A,Vice-Capitão
-282312069,Pedro,fernanda@example.com,229839257,pedro#9713,Faculdade C,Time B,Técnico
-440557026,Clara,lucas@example.com,187715174,clara#7396,Faculdade C,Time A,Jogador
-645145547,João,clara@example.com,104156839,joão#1827,Faculdade A,Time C,Jogador
-833830441,Ana,rafael@example.com,598968577,ana#7004,Faculdade A,Time A,Técnico
-978848046,Rafael,rafael@example.com,693873240,rafael#2198,Faculdade B,Time A,Vice-Capitão
-779448180,Lucas,joao@example.com,564712470,lucas#4998,Faculdade B,Time C,Jogador
-197161933,Lucas,carlos@example.com,234682304,lucas#2140,Faculdade C,Time B,Vice-Capitão
-287776799,Fernanda,pedro@example.com,223218471,fernanda#6951,Faculdade A,Time C,Técnico
-295210623,Fernanda,carlos@example.com,465195785,fernanda#7000,Faculdade D,Time C,Capitão
-216392886,Rafael,pedro@example.com,753082829,rafael#8577,Faculdade C,Time D,Vice-Capitão
-518088567,Rafael,pedro@example.com,153530433,rafael#3375,Faculdade D,Time D,Jogador
-171024654,Fernanda,ana@example.com,702377617,fernanda#9273,Faculdade A,Time D,Técnico
-282260499,Ana,clara@example.com,734092174,ana#2855,Faculdade A,Time C,Jogador
-942282002,João,carlos@example.com,452321334,joão#4295,Faculdade B,Time E,Técnico
-186077399,Lucas,carlos@example.com,867022923,lucas#7642,Faculdade A,Time C,Técnico
-885631921,Carlos,carlos@example.com,340972310,carlos#4843,Faculdade B,Time E,Jogador
-527703094,Rafael,pedro@example.com,742306187,rafael#7713,Faculdade C,Time D,Capitão
-431771658,Carlos,joao@example.com,654616903,carlos#2986,Faculdade D,Time E,Jogador
-327026252,Carlos,ana@example.com,204150328,carlos#6235,Faculdade A,Time B,Técnico
-741714422,Carlos,fernanda@example.com,787361846,carlos#2005,Faculdade A,Time B,Técnico
-883572570,Pedro,joao@example.com,819392407,pedro#4912,Faculdade D,Time D,Capitão
-796322471,Pedro,lucas@example.com,877437583,pedro#7415,Faculdade B,Time A,Capitão
-947691162,Clara,fernanda@example.com,976843716,clara#3441,Faculdade A,Time E,Vice-Capitão
-274970180,Pedro,ana@example.com,551742968,pedro#7111,Faculdade D,Time B,Capitão
-655073635,Carlos,fernanda@example.com,145878851,carlos#9276,Faculdade D,Time C,Vice-Capitão
-501235043,Clara,ana@example.com,850554278,clara#3745,Faculdade B,Time C,Técnico
-840463874,Fernanda,ana@example.com,666672096,fernanda#5118,Faculdade D,Time E,Capitão
-232607983,Ana,ana@example.com,115530021,ana#1866,Faculdade D,Time E,Jogador
-756762646,Rafael,lucas@example.com,258309906,rafael#6812,Faculdade D,Time E,Jogador
-423254678,Pedro,carlos@example.com,697436413,pedro#1128,Faculdade A,Time C,Técnico
-197071878,Ana,carlos@example.com,547995043,ana#3223,Faculdade C,Time E,Vice-Capitão
-425841074,Ana,joao@example.com,205183256,ana#2656,Faculdade C,Time C,Capitão
-604595966,Clara,joao@example.com,633133322,clara#3064,Faculdade B,Time B,Capitão
-430248669,Pedro,rafael@example.com,441949983,pedro#2460,Faculdade C,Time A,Jogador
-547570356,Carlos,fernanda@example.com,154967321,carlos#2374,Faculdade D,Time C,Vice-Capitão
-579336620,Carlos,clara@example.com,758209924,carlos#9555,Faculdade A,Time B,Capitão
-381479525,Rafael,clara@example.com,778848313,rafael#1986,Faculdade A,Time A,Capitão
-502051267,Carlos,clara@example.com,935956057,carlos#8242,Faculdade B,Time C,Jogador
-231593742,Clara,carlos@example.com,203841630,clara#3286,Faculdade D,Time B,Vice-Capitão
-822533376,Pedro,rafael@example.com,888694815,pedro#3960,Faculdade A,Time E,Jogador
-475723706,Fernanda,joao@example.com,985863016,fernanda#8933,Faculdade D,Time C,Vice-Capitão
+Carimbo de data/hora,ID,Nome Completo,E-mail,Telefone,ID do Discord,Faculdade,Time,Cargo (Capitão ou jogador)
+19/10/2024 17:52:08,227236575,Gabriel,gabrielabreu571secundaria@gmail.com,123456789,joao#1234,USP,Time A,Capitão
+19/10/2024 17:52:08,501963591,Viguini,maria@example.com,987654321,maria#5678,USP,Time A,Jogador
+19/10/2024 17:52:08,812811231,teste,teste,teste,teste,teste,teste,teste
+19/10/2024 17:52:08,998863017,teste,teste,teste,teste,teste,teste,teste
+19/10/2024 17:52:08,998863018,Abud,clara@example.com,730179363,ana#7674,USP,Time A,Jogador
+19/10/2024 17:52:08,282312069,Esqueiro,fernanda@example.com,229839257,pedro#9713,USP,Time A,Jogador
+19/10/2024 17:52:08,440557026,Clara,lucas@example.com,187715174,clara#7396,Faculdade C,Time A,Jogador
+19/10/2024 17:52:08,645145547,João,clara@example.com,104156839,joão#1827,Faculdade A,Time B,Capitão
+19/10/2024 17:52:08,833830441,Ana,rafael@example.com,598968577,ana#7004,Faculdade A,Time B,Jogador
+19/10/2024 17:52:08,978848046,Rafael,rafael@example.com,693873240,rafael#2198,Faculdade B,Time B,Jogador
+19/10/2024 17:52:08,779448180,Lucas,joao@example.com,564712470,lucas#4998,Faculdade B,Time B,Jogador
+19/10/2024 17:52:08,197161933,Lucas,carlos@example.com,234682304,lucas#2140,Faculdade C,Time B,Jogador
+19/10/2024 17:52:08,287776799,Fernanda,pedro@example.com,223218471,fernanda#6951,Faculdade A,Time C,Capitão
+19/10/2024 17:52:08,295210623,Fernanda,carlos@example.com,465195785,fernanda#7000,Faculdade D,Time C,Jogador
+19/10/2024 17:52:08,216392886,Rafael,pedro@example.com,753082829,rafael#8577,Faculdade C,Time C,Jogador
+19/10/2024 17:52:08,518088567,Rafael,pedro@example.com,153530433,rafael#3375,Faculdade D,Time C,Jogador
+19/10/2024 17:52:08,171024654,Fernanda,ana@example.com,702377617,fernanda#9273,Faculdade A,Time C,Jogador
+19/10/2024 17:52:08,282260499,Ana,clara@example.com,734092174,ana#2855,Faculdade A,Time D,Capitão
+19/10/2024 17:52:08,942282002,João,carlos@example.com,452321334,joão#4295,Faculdade B,Time D,Jogador
+19/10/2024 17:52:08,186077399,Lucas,carlos@example.com,867022923,lucas#7642,Faculdade A,Time D,Jogador
+19/10/2024 17:52:08,885631921,Carlos,carlos@example.com,340972310,carlos#4843,Faculdade B,Time D,Jogador
+19/10/2024 17:52:08,527703094,Rafael,pedro@example.com,742306187,rafael#7713,Faculdade C,Time D,Jogador
+19/10/2024 17:52:08,431771658,Carlos,joao@example.com,654616903,carlos#2986,Faculdade D,Time E,Capitão
+19/10/2024 17:52:08,327026252,Carlos,ana@example.com,204150328,carlos#6235,Faculdade A,Time E,Jogador
+19/10/2024 17:52:08,741714422,Carlos,fernanda@example.com,787361846,carlos#2005,Faculdade A,Time E,Jogador
+19/10/2024 17:52:08,883572570,Pedro,joao@example.com,819392407,pedro#4912,Faculdade D,Time E,Jogador
+19/10/2024 17:52:08,796322471,Pedro,lucas@example.com,877437583,pedro#7415,Faculdade B,Time E,Jogador
+19/10/2024 17:52:08,947691162,Clara,fernanda@example.com,976843716,clara#3441,Faculdade A,Time F,Capitão
+19/10/2024 17:52:08,274970180,Pedro,ana@example.com,551742968,pedro#7111,Faculdade D,Time F,Jogador
+19/10/2024 17:52:08,655073635,Carlos,fernanda@example.com,145878851,carlos#9276,Faculdade D,Time F,Jogador
+19/10/2024 17:52:08,501235043,Clara,ana@example.com,850554278,clara#3745,Faculdade B,Time F,Jogador
+19/10/2024 17:52:08,840463874,Fernanda,ana@example.com,666672096,fernanda#5118,Faculdade D,Time F,Jogador
+19/10/2024 17:52:08,232607983,Ana,ana@example.com,115530021,ana#1866,Faculdade D,Time G,Capitão
+19/10/2024 17:52:08,756762646,Rafael,lucas@example.com,258309906,rafael#6812,Faculdade D,Time G,Jogador
+19/10/2024 17:52:08,423254678,Pedro,carlos@example.com,697436413,pedro#1128,Faculdade A,Time G,Jogador
+19/10/2024 17:52:08,197071878,Ana,carlos@example.com,547995043,ana#3223,Faculdade C,Time G,Jogador
+19/10/2024 17:52:08,425841074,Ana,joao@example.com,205183256,ana#2656,Faculdade C,Time G,Jogador
+19/10/2024 17:52:08,604595966,Clara,joao@example.com,633133322,clara#3064,Faculdade B,Time H,Capitão
+19/10/2024 17:52:08,430248669,Pedro,rafael@example.com,441949983,pedro#2460,Faculdade C,Time H,Jogador
+19/10/2024 17:52:08,547570356,Carlos,fernanda@example.com,154967321,carlos#2374,Faculdade D,Time H,Jogador
+19/10/2024 17:52:08,579336620,Carlos,clara@example.com,758209924,carlos#9555,Faculdade A,Time H,Jogador
+19/10/2024 17:52:08,381479525,Rafael,clara@example.com,778848313,rafael#1986,Faculdade A,Time H,Jogador
+19/10/2024 17:52:08,502051267,Carlos,clara@example.com,935956057,carlos#8242,Faculdade B,Time I,Capitão
+19/10/2024 17:52:08,231593742,Clara,carlos@example.com,203841630,clara#3286,Faculdade D,Time I,Jogador
+19/10/2024 17:52:08,822533376,Pedro,rafael@example.com,888694815,pedro#3960,Faculdade A,Time I,Jogador
+19/10/2024 17:52:08,475723706,Fernanda,joao@example.com,985863016,fernanda#8933,Faculdade D,Time I,Jogador
+19/10/2024 17:52:08,186087399,Lucas,lucas2@example.com,867022924,lucas#5674,Faculdade A,Time J,Capitão
+19/10/2024 17:52:08,347261742,Clara,clara3@example.com,203841631,clara#4321,Faculdade D,Time J,Jogador
+19/10/2024 17:52:08,634856222,Pedro,joao2@example.com,888694816,pedro#5555,Faculdade C,Time J,Jogador
+19/10/2024 17:52:08,998863016,Fernanda,fernanda2@example.com,985863017,fernanda#9999,Faculdade B,Time J,Jogador
+19/10/2024 17:52:08,305111021,Ana,ana2@example.com,752309996,ana#1234,Faculdade E,Time J,Jogador
+19/10/2024 17:52:08,456789123,João,joao3@example.com,567834567,joao#4829,Faculdade D,Time K,Capitão
+19/10/2024 17:52:08,123567890,Lucas,lucas3@example.com,234567890,lucas#3921,Faculdade A,Time K,Jogador
+19/10/2024 17:52:08,986437213,Rafael,rafael2@example.com,867092873,rafael#7845,Faculdade C,Time K,Jogador
+19/10/2024 17:52:08,789234123,Fernanda,fernanda3@example.com,783421987,fernanda#6712,Faculdade D,Time K,Jogador
+19/10/2024 17:52:08,659283714,Pedro,pedro2@example.com,998673214,pedro#4591,Faculdade B,Time K,Jogador
+19/10/2024 17:52:08,423598761,Alice,alice2@example.com,235987642,alice#9876,Faculdade C,Time L,Capitão
+19/10/2024 17:52:08,985623478,Camila,camila2@example.com,582398746,camila#3456,Faculdade E,Time L,Jogador
+19/10/2024 17:52:08,739862143,Diego,diego2@example.com,983764215,diego#1289,Faculdade A,Time L,Jogador
+19/10/2024 17:52:08,398672145,Elisa,elisa2@example.com,659382745,elisa#3498,Faculdade D,Time L,Jogador
+19/10/2024 17:52:08,529834762,João,joao4@example.com,238746529,joao#5741,Faculdade C,Time L,Jogador
+19/10/2024 17:52:08,348679512,Lucas,lucas4@example.com,748295316,lucas#8294,Faculdade B,Time M,Capitão
+19/10/2024 17:52:08,192837465,Rafael,rafael3@example.com,123987456,rafael#4928,Faculdade E,Time M,Jogador
+19/10/2024 17:52:08,847362159,Fernanda,fernanda4@example.com,847239561,fernanda#5819,Faculdade A,Time M,Jogador
+19/10/2024 17:52:08,648273951,Ana,ana3@example.com,628374951,ana#8493,Faculdade C,Time M,Jogador
+19/10/2024 17:52:08,923847561,Camila,camila3@example.com,948576123,camila#6781,Faculdade D,Time M,Jogador
+19/10/2024 17:52:08,673849215,Diego,diego3@example.com,387264951,diego#4723,Faculdade B,Time N,Capitão
+19/10/2024 17:52:08,498275316,Elisa,elisa3@example.com,549873216,elisa#9321,Faculdade E,Time N,Jogador
+19/10/2024 17:52:08,678231495,Pedro,pedro3@example.com,982734651,pedro#6719,Faculdade D,Time N,Jogador
+19/10/2024 17:52:08,287365194,Rafael,rafael4@example.com,827346591,rafael#4983,Faculdade A,Time N,Jogador
+19/10/2024 17:52:08,583746291,Alice,alice3@example.com,583741926,alice#1283,Faculdade C,Time N,Jogador
+19/10/2024 17:52:08,583764921,Lucas,lucas5@example.com,782369541,lucas#2947,Faculdade B,Time O,Capitão
+19/10/2024 17:52:08,384756291,Camila,camila4@example.com,837456129,camila#8462,Faculdade E,Time O,Jogador
+19/10/2024 17:52:08,927364581,Diego,diego4@example.com,928374651,diego#5312,Faculdade A,Time O,Jogador
+19/10/2024 17:52:08,837462951,Fernanda,fernanda5@example.com,384765219,fernanda#1237,Faculdade C,Time O,Jogador
+19/10/2024 17:52:08,294867531,Ana,ana4@example.com,983746251,ana#8716,Faculdade D,Time O,Jogador
+19/10/2024 17:52:08,487562319,Pedro,pedro4@example.com,485762319,pedro#7893,Faculdade B,Time P,Capitão
+19/10/2024 17:52:08,192873654,Rafael,rafael5@example.com,192873654,rafael#1298,Faculdade E,Time P,Jogador
+19/10/2024 17:52:08,637281495,Elisa,elisa4@example.com,647382915,elisa#4762,Faculdade A,Time P,Jogador
+19/10/2024 17:52:08,873264519,Alice,alice4@example.com,837265419,alice#9237,Faculdade C,Time P,Jogador
+19/10/2024 17:52:08,783462519,Lucas,lucas6@example.com,782364519,lucas#8431,Faculdade D,Time P,Jogador
+19/10/2024 17:52:08,928374651,Diego,diego5@example.com,928374652,diego#9813,Faculdade E,Time Q,Capitão
+19/10/2024 17:52:08,837462952,Fernanda,fernanda6@example.com,837462952,fernanda#5327,Faculdade A,Time Q,Jogador
+19/10/2024 17:52:08,293847561,Ana,ana5@example.com,293847561,ana#2937,Faculdade C,Time Q,Jogador
+19/10/2024 17:52:08,837462953,Pedro,pedro5@example.com,837462953,pedro#1839,Faculdade D,Time Q,Jogador
+19/10/2024 17:52:08,928374653,Rafael,rafael6@example.com,928374653,rafael#3847,Faculdade B,Time Q,Jogador
+19/10/2024 17:52:08,123467890,Alice,alice5@example.com,123467890,alice#6543,Faculdade E,Time R,Capitão
+19/10/2024 17:52:08,908765432,Camila,camila5@example.com,908765432,camila#7865,Faculdade A,Time R,Jogador
+19/10/2024 17:52:08,678901234,Diego,diego6@example.com,678901234,diego#2198,Faculdade C,Time R,Jogador
+19/10/2024 17:52:08,567890123,João,joao5@example.com,567890123,joao#1239,Faculdade D,Time R,Jogador
+19/10/2024 17:52:08,876543219,Rafael,rafael7@example.com,876543219,rafael#7812,Faculdade B,Time R,Jogador
+19/10/2024 17:52:08,234567890,Carlos,carlos6@example.com,234567890,carlos#9823,Faculdade E,Time S,Capitão
+19/10/2024 17:52:08,987654321,Lucas,lucas7@example.com,987654321,lucas#7834,Faculdade A,Time S,Jogador
+19/10/2024 17:52:08,876543210,Fernanda,fernanda7@example.com,876543210,fernanda#6429,Faculdade C,Time S,Jogador
+19/10/2024 17:52:08,765432109,Ana,ana6@example.com,765432109,ana#1958,Faculdade D,Time S,Jogador
+19/10/2024 17:52:08,654321098,Pedro,pedro6@example.com,654321098,pedro#4267,Faculdade B,Time S,Jogador
+19/10/2024 17:52:08,543210987,Alice,alice6@example.com,543210987,alice#9374,Faculdade E,Time T,Capitão
+19/10/2024 17:52:08,432109876,Camila,camila6@example.com,432109876,camila#5723,Faculdade A,Time T,Jogador
+19/10/2024 17:52:08,321098765,Diego,diego7@example.com,321098765,diego#1235,Faculdade C,Time T,Jogador
+19/10/2024 17:52:08,210987654,João,joao6@example.com,210987654,joao#9483,Faculdade D,Time T,Jogador
+19/10/2024 17:52:08,109876543,Rafael,rafael8@example.com,109876543,rafael#7362,Faculdade B,Time T,Jogador
+19/10/2024 17:52:08,987651234,Carlos,carlos7@example.com,987651234,carlos#6594,Faculdade E,Time U,Capitão
+19/10/2024 17:52:08,876512345,Lucas,lucas8@example.com,876512345,lucas#9485,Faculdade A,Time U,Jogador
+19/10/2024 17:52:08,765123456,Fernanda,fernanda8@example.com,765123456,fernanda#5743,Faculdade C,Time U,Jogador
+19/10/2024 17:52:08,654234567,Ana,ana7@example.com,654234567,ana#4287,Faculdade D,Time U,Jogador
+19/10/2024 17:52:08,543345678,Pedro,pedro7@example.com,543345678,pedro#7814,Faculdade B,Time U,Jogador
+19/10/2024 17:52:08,432456789,Alice,alice7@example.com,432456789,alice#9872,Faculdade E,Time V,Capitão
+19/10/2024 17:52:08,321567890,Camila,camila7@example.com,321567890,camila#6732,Faculdade A,Time V,Jogador
+19/10/2024 17:52:08,210678901,Diego,diego8@example.com,210678901,diego#9123,Faculdade C,Time V,Jogador
+19/10/2024 17:52:08,109789012,João,joao7@example.com,109789012,joao#8923,Faculdade D,Time V,Jogador
+19/10/2024 17:52:08,987890123,Rafael,rafael9@example.com,987890123,rafael#4621,Faculdade B,Time V,Jogador
